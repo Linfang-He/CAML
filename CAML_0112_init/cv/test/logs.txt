@@ -1,0 +1,111 @@
+=============================================== 
+  all_dropout: False
+  allow_growth: 0
+  amax: 600
+  att_pool: MAX
+  att_reuse: 0
+  att_type: SOFT
+  average_embed: 1
+  base_encoder: GLOVE
+  batch_size: 128
+  beam_size: 4
+  char_max: 8
+  clip_norm: 1
+  command: D:/Desktop/CAML-master/train_CAML.py
+  concept: 1
+  data_link: data/movie_100
+  data_prepare: 0
+  dataset: A2_Amazon_Instant_Video
+  decay_epoch: 1
+  decay_lr: 0
+  decay_stairs: 1
+  decay_steps: 0
+  dev: 1
+  dev_lr: 0
+  dmax: 20
+  dropout: 0.8
+  early_stop: 5
+  emb_dropout: 0.8
+  emb_size: 50
+  emb_type: glove
+  epochs: 1
+  eval: 1
+  eval_train: 1
+  factor: 10
+  feed_rating: 0
+  gen_dir: gen_dir/
+  gen_lambda: 1.0
+  gen_true_dir: true_dir/
+  gmax: 30
+  gpu: 0
+  hard: 1
+  hdim: 50
+  implicit: 0
+  init: 0.01
+  init_type: xavier
+  key_word_lambda: 1.0
+  l2_reg: 1e-06
+  latent_size: 50
+  learn_rate: 0.001
+  len_penalty: 2
+  log: 1
+  log_dir: logs
+  masking: 1
+  model: cv/test/model_best.ckpt
+  num_class: 2
+  num_com: 1
+  num_heads: 1
+  num_inter_proj: 1
+  num_neg: 6
+  num_proj: 1
+  opt: Adam
+  pretrained: 0
+  qmax: 600
+  rating_lambda: 1.0
+  rnn_dim: 50
+  rnn_dropout: 0.8
+  rnn_layers: 1
+  rnn_size: 50
+  rnn_type: RAW_MSE_CAML_FN_FM
+  seed: 1337
+  show_affinity: 0
+  show_att: 0
+  smax: 30
+  temperature: 0.5
+  tensorboard: False
+  trainable: 1
+  translate_proj: 1
+  use_lower: 1
+  view_output: logs
+  wiggle_after: 0
+  wiggle_lr: 1e-05
+  wiggle_score: 0.0
+  word_aggregate: MAX
+  word_gumbel: 0
+  word_pooling: MEAN
+  write_qual: 0
+=============================================== 
+Train=100 Dev=100 Test=100
+========================================
+List of all Trainable Variables
+ var   0: (40085, 50)     embedding_layer/embedding:0
+ var   1: (30, 50)        proj_trans_proj/weights_0:0
+ var   2: (50,)           proj_trans_proj/bias_0:0
+ var   3: (50, 50)        proj_att_proj_caml_0/weights_0_att_proj_caml_0:0
+ var   4: (50, 50)        proj_att_proj_inner_0/weights_0_att_proj_inner_0:0
+ var   5: (100, 50)       linear/W_final_proj_0:0
+ var   6: (50,)           linear/bias_final_proj_0:0
+ var   7: (1,)            rec_out/fm_/fm_w0:0
+ var   8: (100,)          rec_out/fm_/fm_w:0
+ var   9: (10, 100)       rec_out/fm_/fm_V:0
+ var  10: (50, 50)        gen_review/review_user_mapping:0
+ var  11: (50, 50)        gen_review/review_item_mapping:0
+ var  12: (50,)           gen_review/review_bias:0
+ var  13: (50, 40085)     gen_review/review_output_layer/kernel:0
+ var  14: (40085,)        gen_review/review_output_layer/bias:0
+ var  15: (100, 100)      gen_review/gru_cell/gates/kernel:0
+ var  16: (100,)          gen_review/gru_cell/gates/bias:0
+ var  17: (100, 50)       gen_review/gru_cell/candidate/kernel:0
+ var  18: (50,)           gen_review/gru_cell/candidate/bias:0
+Total number of trainable params 4081494
+=====================================
